@@ -6,13 +6,12 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist',
-    minify: 'terser',
+    minify: 'esbuild', // Changed from 'terser' to 'esbuild'
     sourcemap: false,
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          // Separa otras dependencias grandes si es necesario
         }
       }
     }

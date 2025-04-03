@@ -83,7 +83,7 @@ const Home = () => {
               </div>
               <div className="flex items-start">
                 <span className="flex-shrink-0 text-sm font-medium text-gray-500 w-20">Grado:</span>
-                <span className="text-sm text-gray-900">11° Semestre</span>
+                <span className="text-sm text-gray-900">8° Cuatrimestre</span>
               </div>
               <div className="flex items-start">
                 <span className="flex-shrink-0 text-sm font-medium text-gray-500 w-20">Grupo:</span>

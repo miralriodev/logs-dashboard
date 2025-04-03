@@ -1,7 +1,7 @@
-// Configuración de URLs de API según el entorno
+
 const API_URL = {
-  development: 'http://localhost:10000',
-  production: 'https://winston-omae.onrender.com', // Reemplaza con la URL de tu backend en Render
+  development: 'http://localhost:3002',
+  production: 'https://winston-omae.onrender.com',
 };
 
 // Determinar el entorno actual

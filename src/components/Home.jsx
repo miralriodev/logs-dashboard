@@ -114,16 +114,16 @@ const Home = () => {
             </div>
             <div className="space-y-3">
               <div className="flex items-start">
-                <span className="flex-shrink-0 text-sm font-medium text-gray-500 w-20">Nombre:</span>
-                <span className="text-sm text-gray-900">M.T.I. Marco Antonio Ramírez Hernández</span>
+                <span className="flex-shrink-0 text-sm font-medium text-gray-500 w-20">Nombre: Emmanuel Martínez Hernández</span>
+                <span className="text-sm text-gray-900"></span>
               </div>
               <div className="flex items-start">
                 <span className="flex-shrink-0 text-sm font-medium text-gray-500 w-20">Grado:</span>
-                <span className="text-sm text-gray-900">Maestría en Tecnologías de la Información</span>
+                <span className="text-sm text-gray-900">Ingenieria en desarrollo y gestion de software.</span>
               </div>
               <div className="flex items-start">
                 <span className="flex-shrink-0 text-sm font-medium text-gray-500 w-20">Materia:</span>
-                <span className="text-sm text-gray-900">Desarrollo Web Profesional</span>
+                <span className="text-sm text-gray-900">Seguridad en desarrollo de aplicaciones</span>
               </div>
             </div>
           </div>

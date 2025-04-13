@@ -98,7 +98,7 @@ const Home = () => {
               </div>
               <div className="flex items-start">
                 <span className="flex-shrink-0 text-sm font-medium text-gray-500 w-20">Grupo:</span>
-                <span className="text-sm text-gray-900">IDGS11-A</span>
+                <span className="text-sm text-gray-900">IDGS11</span>
               </div>
             </div>
           </div>
@@ -246,7 +246,7 @@ const Home = () => {
               <span className="text-sm text-gray-500">Sistema de Monitoreo de Logs</span>
             </div>
             <div className="mt-4 md:mt-0 text-sm text-gray-500">
-              &copy; {new Date().getFullYear()} Hugo Alberto Miralrio Espinoza - IDGS11-A
+              &copy; {new Date().getFullYear()} Hugo Alberto Miralrio Espinoza - IDGS11
             </div>
           </div>
         </div>

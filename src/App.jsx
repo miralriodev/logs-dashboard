@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
 import Login from './auth/Login';
-import Dashboard from './components/dashboard';
+import Dashboard from './components/Dashboard';
 import Home from './components/Home';
 
 function App() {

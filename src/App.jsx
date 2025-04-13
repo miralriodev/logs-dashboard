@@ -1,15 +1,22 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
 import Login from './auth/Login';
-import Dashboard from './components/Dashboard';
+import Dashboard from './components/dashboard';
 import Home from './components/Home';
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(() => {
+    return localStorage.getItem('isAuthenticated') === 'true';
+  });
+
+  useEffect(() => {
+    localStorage.setItem('isAuthenticated', isAuthenticated);
+  }, [isAuthenticated]);
 
   const handleLoginSuccess = () => {
     setIsAuthenticated(true);
+    localStorage.setItem('isAuthenticated', 'true');
   };
 
   return (

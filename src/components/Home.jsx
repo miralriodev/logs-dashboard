@@ -1,7 +1,9 @@
-import { ArrowRight, BarChart2, Clock, Server, Shield } from "lucide-react"
-import { Link } from "react-router-dom"
+import { ArrowRight, BarChart2, Clock, Server, Shield } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
+
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-gray-50/50">
       {/* Header */}
@@ -25,6 +27,15 @@ const Home = () => {
               >
                 Dashboard
               </Link>
+              <button
+                onClick={() => {
+                  localStorage.removeItem('isAuthenticated');
+                  window.location.reload();
+                }}
+                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+              >
+                Cerrar sesión
+              </button>
             </div>
           </div>
         </div>

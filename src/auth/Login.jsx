@@ -4,6 +4,7 @@ import axios from "axios"
 import { Eye, EyeOff, KeyRound, Mail, User } from "lucide-react"
 import { QRCodeSVG } from "qrcode.react"
 import { useState } from "react"
+import { Link } from "react-router-dom"
 import { BASE_URL } from "../config/api"
 
 export default function Login({ onLoginSuccess }) {
@@ -116,23 +117,34 @@ export default function Login({ onLoginSuccess }) {
             {step === "otp" && "Enter verification code"}
           </h2>
           <p className="mt-2 text-center text-sm text-gray-600">
-            {step === "login" && "Or "}
             {step === "login" && (
-              <button
-                onClick={() => setStep("register")}
-                className="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition duration-150 ease-in-out"
-              >
-                create a new account
-              </button>
+              <>
+                ¿Olvidaste tu contraseña?{" "}
+                <Link
+                  to="/reset-password"
+                  className="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition duration-150 ease-in-out"
+                >
+                  Recupérala aquí
+                </Link>
+                {" "}·{" "}
+                <button
+                  onClick={() => setStep("register")}
+                  className="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition duration-150 ease-in-out"
+                >
+                  Crear cuenta nueva
+                </button>
+              </>
             )}
-            {step === "register" && "Already have an account? "}
             {step === "register" && (
-              <button
-                onClick={() => setStep("login")}
-                className="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition duration-150 ease-in-out"
-              >
-                Sign in
-              </button>
+              <>
+                ¿Ya tienes una cuenta?{" "}
+                <button
+                  onClick={() => setStep("login")}
+                  className="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition duration-150 ease-in-out"
+                >
+                  Inicia sesión
+                </button>
+              </>
             )}
           </p>
         </div>

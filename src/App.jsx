@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
 import Login from './auth/Login';
+import PasswordReset from './auth/PasswordReset';
 import Dashboard from './components/Dashboard';
 import Home from './components/Home';
 
@@ -33,6 +34,10 @@ function App() {
           element={
             isAuthenticated ? <Dashboard /> : <Navigate to="/" replace />
           } 
+        />
+        <Route 
+          path="/reset-password" 
+          element={<PasswordReset />} 
         />
       </Routes>
     </Router>
